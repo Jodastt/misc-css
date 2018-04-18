@@ -1,0 +1,30 @@
+.btn {
+  display: block;
+  margin: 5rem auto;
+  position: relative;
+  background-color: black;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  transition: border-width 0.1s ease-in;
+}
+
+.btn:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: red;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
+  transition: all .1s ease;
+}
+
+.btn:hover:before {
+  transform: scale(1.1);
+}
+
+.btn:focus:before {
+  transform: scale(1.5);
+}
